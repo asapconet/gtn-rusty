@@ -1,5 +1,5 @@
 fn main() {
-    // tupples
+    // tuples
     tuple_fn();
     //functions with arguments and return values
     let calculate_average_age = calculate_average_age(10, 30, 40);
