@@ -46,5 +46,9 @@ fn dangle() -> String {
 // * Generally referencing is more like giving permissions to values, where the &=read, and the &mut = read and write
 // Also this permissions is not possible when the original value is not mutable, you cannot have one value
 // with giving refs of both read and write same time.
+
 // * Also, when you have a mutable reference, you cannot have any other references to the same value, as it would lead to data races.
 // Thats to say until the usage of that mutable reference is dropped you cannot have any other ref to same value
+
+// * For dangles, you cannot return a reference to a local variable, as it would be dropped at the end of the function scope.
+// Thats just like not returning anything when you declear a function with operations and not returning anything
