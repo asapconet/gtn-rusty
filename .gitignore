@@ -2,7 +2,7 @@
 
 # Ignore build output directories
 /target/
-**/target/
+**/target
 
 # Ignore generated Cargo.lock in workspace members if you prefer (optional)
 # Cargo.lock is usually committed for applications, not libraries
@@ -35,3 +35,4 @@ rust-toolchain.toml
 
 # Ignore target artifacts in all workspace members
 **/target/
+/target
