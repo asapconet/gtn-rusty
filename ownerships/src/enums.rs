@@ -44,6 +44,7 @@ pub fn run() {
     let show_task_id = TaskAnalysis::id(55);
     show_task_id.show();
 
+    //HOW TO USE OPTION -- not fully into the other rep of our bad native 'null' value.
     let complete_task_info = Some(TaskAnalysis::from(new_task));
     let no_task_info: Option<TaskAnalysis> = None;
 
