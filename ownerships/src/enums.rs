@@ -9,6 +9,7 @@ enum TaskType {
 }
 
 //this is more like a tuple enum
+#[derive(Debug)]
 enum TaskAnalysis {
     id(u32),
     is_task_info { id: u32, task_type: TaskType },
@@ -31,7 +32,7 @@ impl TaskAnalysis {
 
 pub fn run() {
     let new_task = TaskAnalysis::is_task_info {
-        id: 1,
+        id: 34,
         task_type: TaskType::URGENT,
     };
 
@@ -42,4 +43,17 @@ pub fn run() {
 
     let show_task_id = TaskAnalysis::id(55);
     show_task_id.show();
+
+    let complete_task_info = Some(TaskAnalysis::from(new_task));
+    let no_task_info: Option<TaskAnalysis> = None;
+
+    match no_task_info {
+        Some(task) => println!("Task information: {:#?}", task),
+        None => println!("No task information provided"),
+    }
+
+    match complete_task_info {
+        Some(task) => println!("Task information: {:#?}", task),
+        None => println!("No task information provided"),
+    }
 }
