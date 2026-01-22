@@ -1,7 +1,8 @@
 #[derive(Debug)]
 struct MyTask {
+    task_id: u32,
     task_name: String,
-    priority: u8,
+    task_type: String,
     daily: bool,
     weekly: bool,
     monthly: bool,
@@ -11,8 +12,9 @@ struct MyTask {
 
 impl MyTask {
     fn add_task(
+        task_id: u32,
         task_name: String,
-        priority: u8,
+        task_type: String,
         daily: bool,
         weekly: bool,
         monthly: bool,
@@ -20,8 +22,9 @@ impl MyTask {
         total_daily_task_completed: u32,
     ) -> MyTask {
         return MyTask {
+            task_id,
             task_name,
-            priority,
+            task_type,
             daily,
             weekly,
             monthly,
@@ -40,7 +43,16 @@ impl MyTask {
 }
 
 pub fn run() {
-    let task = MyTask::add_task(String::from("my first task"), 1, true, false, false, 7, 5);
+    let task = MyTask::add_task(
+        1,
+        String::from("my first task"),
+        String::from("urgent"),
+        true,
+        false,
+        false,
+        7,
+        5,
+    );
 
     println!("new daily task is {:#?}", task);
 
