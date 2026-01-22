@@ -1,3 +1,4 @@
+pub mod methods;
 pub mod refs;
 pub mod slice;
 pub mod structs;
