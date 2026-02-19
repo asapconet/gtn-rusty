@@ -29,7 +29,7 @@ pub fn match_parterns(range: CheckRange) -> u8 {
 
 // USING OPTIONS<T> IN MATCHING
 
-fn options_match() {
+pub fn options_match() {
     let five = Some(5);
     let six = add_to_list(five);
     let seven = add_to_list(None);
