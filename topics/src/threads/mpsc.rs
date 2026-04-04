@@ -18,7 +18,7 @@ pub fn spawn_thread() {
     handle.join().unwrap();
 }
 
-// stage two -- channel thread
+// stage two -- channel thread [mpsc]
 pub fn channel_thread() {
     let (tx, rx) = mpsc::channel();
     let txl = tx.clone();
